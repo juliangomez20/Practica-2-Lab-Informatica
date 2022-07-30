@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int malla, malla2 = 0;
+
+    cout<<"Ingrese el valor de la malla n (la malla es nxn) "<<endl;
+    cin>>malla;
+
+    malla2= (malla*malla)+(malla);
+    cout<<"Las posibles salidas son :"<<malla2;
+
+
+    return 0;
+}

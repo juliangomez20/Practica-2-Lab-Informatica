@@ -1,0 +1,87 @@
+
+#include <iostream>
+
+using namespace std;
+
+int reserva ();
+
+int main()
+{
+    int a, b, operacion, fila, columna, fila1, columna1 =0;
+    cout<<"Sistema de reservas del cine"<<endl;
+    int matriz [15][20] = {{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+    //cout<<matriz[0][0]<<endl;
+    //cout<<*(*(matriz))<<endl;//Puntero = matriz[0][0]
+    //cout<<*(*(matriz+1)+1)<<endl;//Puntero = matriz[1][1]
+do{
+    cout<<"Ingrese el valor de la operación a realizar: ";
+    cin>>operacion;
+    if (operacion = 1){
+        cout<<"Hacer una reserva"<<endl;
+        cout<<"Ingrese la fila de la reserva ";
+        cin>>fila;
+        cout<<"Ingrese el asiento de la reserva ";
+        cin>>columna;
+        fila1= fila - 1;
+        columna1 = columna - 1;
+        *(*(matriz+columna1)+fila1) = 1;
+        cout<<"Matriz ["<<fila<<"]"<<"["<<columna<<"]: "<<*(*(matriz+columna1)+fila1)<<endl;
+        cout<<"Reserva exitosa"<<endl;
+    }
+    if (operacion = 2){
+        cout<<"Cancelar una reserva"<<endl;
+        cout<<"Ingrese la fila de la reserva ";
+        
+        cin>>fila;
+        cout<<"Ingrese el asiento de la reserva ";
+        cin>>columna;
+        fila1= fila - 1;
+        columna1 = columna - 1;
+        *(*(matriz+columna1)+fila1) = 0;
+        cout<<"Matriz ["<<fila<<"]"<<"["<<columna<<"]: "<<*(*(matriz+columna1)+fila1)<<endl;
+        cout<<"Cancelación de reserva exitosa"<<endl;
+    }
+    if (operacion = 3){
+        cout<<"Verifificar si un asiento esta reservado"<<endl;
+        cout<<"Ingrese la fila de la reserva ";
+        cin>>fila;
+        cout<<"Ingrese el asiento de la reserva ";
+        cin>>columna;
+        fila1= fila - 1;
+        columna1 = columna - 1;
+        
+        /*if (*(*(matriz+columna1)+fila1) = 0){
+            cout<<"-"<<endl;
+        }
+        else{
+                cout<<"+"<<endl;
+            }
+        */    
+        
+        }
+    if (operacion = 4){
+        for (int i = 0; i<15; i++){
+    for (int j=0; j<20; j++){
+        if(matriz[i][j]=1){
+            cout<<"[+]";
+        }
+        else{
+            cout<<"[-]";
+        }
+        //cout<<"["<<matriz[i][j]<<"]";
+    }
+    cout<<endl;
+            
+        }
+    
+        
+    }
+    
+}while(operacion !=5);
+cout<<"Gracias por usar el sistema de reservas del cine; hasta luego";
+    
+    
+    
+
+    return 0;
+}
